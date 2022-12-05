@@ -6,41 +6,33 @@ public class Shed {
     public MilkTank tank;
     public MilkingMachine milkingMachine;
 
-    public Shed(MilkTank tank) {
+    private String shedName;
+
+    public Shed(String shedName, MilkTank tank) {
+        this.shedName = shedName;
         this.tank =tank;
         this.animalList = new ArrayList<>();
 
     }
-    public installMilkingMachine (MilkingMachine m){
+    public void installMilkingMachine (MilkingMachine m1){
 
-        this.milkingMachine = m;
+        this.milkingMachine = m1;
     }
 
-
-     public MilkingMachine() {
-        for (Animal animal : animalList) {
-            if (animal instanceof IMilkable) {
-                MilkingMachine.milk(IMilkable);
-                int totalMilk +=amount;
-            }
-        }
-    }
-
-         public milkAllAnimals(){
-            for(Animal animal: animallist) {
+         public void milkAllAnimals(){
+             Animal[] animallist;
+             for(Animal animal: animallist) {
                 if(animal instanceof IMilkable) {
-                    this.milkingMAchine.milk(animal);
-                    
+                    this.milkingMachine.milk((IMilkable)animal);
             }
-                
         }
     }
     
         public String toString () {
             return "Shed{" +
-                    "name='" + name + '\'' +
+
                     '}';
         }
     }
-}
+
 

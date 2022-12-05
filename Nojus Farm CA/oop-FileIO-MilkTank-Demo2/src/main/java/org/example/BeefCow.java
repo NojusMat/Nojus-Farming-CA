@@ -1,4 +1,7 @@
 package org.example;
+
+import java.util.Random;
+
 public class BeefCow extends Animal {
 
     private String pedigree;
@@ -6,35 +9,22 @@ public class BeefCow extends Animal {
     private int age;
 
     public BeefCow(int id, String name,String pedigree,double weight,int age) {
-        super(id, name);
+        super(id,name,pedigree,weight,age);
         this.pedigree = pedigree;
         this.weight = weight;
         this.age = age;
     }
 
-    @Override
-    public String getPedigree() {
-        return pedigree;
-    }
 
     @Override
     public void setPedigree(String pedigree) {
         this.pedigree = pedigree;
     }
 
-    @Override
-    public double getWeight() {
-        return weight;
-    }
 
     @Override
     public void setWeight(double weight) {
         this.weight = weight;
-    }
-
-    @Override
-    public int getAge() {
-        return age;
     }
 
     @Override
@@ -43,10 +33,20 @@ public class BeefCow extends Animal {
     }
 
     @Override
-    public String toString() {
-        // call superclass toString method to get Shape details
-        return super.toString() + "[ pedigree = " + this.pedigree + "] "
-                + " [ weight =" + this.weight + "]"
-                + " [ age =" + this.age + "]";
+    public String generateName() {
+//        public String generateName() {
+//            Random rand = new Random();
+//            String name = name[rand.nextInt(goatNames)];
+//            System.out.println(name);
+//            return name;
+        return null;
     }
+//
+//    @Override
+//    public String toString() {
+//        // call superclass toString method to get Shape details
+//        return super.toString() + "[ pedigree = " + this.pedigree + "] "
+//                + " [ weight =" + this.weight + "]"
+//                + " [ age =" + this.age + "]";
+//    }
 }

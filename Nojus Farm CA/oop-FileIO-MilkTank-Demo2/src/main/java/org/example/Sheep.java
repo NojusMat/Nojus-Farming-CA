@@ -6,15 +6,10 @@ public class Sheep extends Animal{
     private int age;
 
     public Sheep(int id, String name,String pedigree,double weight,int age) {
-        super(id, name);
+        super(id,name,pedigree,weight,age);
         this.pedigree = pedigree;
         this.weight = weight;
         this.age = age;
-    }
-
-    @Override
-    public String getPedigree() {
-        return pedigree;
     }
 
     @Override
@@ -23,30 +18,28 @@ public class Sheep extends Animal{
     }
 
     @Override
-    public double getWeight() {
-        return weight;
-    }
-
-    @Override
     public void setWeight(double weight) {
         this.weight = weight;
     }
 
-    @Override
-    public int getAge() {return age;
-    }
     @Override
     public void setAge(int age) {
         this.age = age;
     }
 
     @Override
-    public String toString() {
-        // call superclass toString method to get Shape details
-        return super.toString() + "[ pedigree = " + this.pedigree+ "] "
-                +" [ weight ="+this.weight+"]"
-                +" [ age ="+this.age+"]";
+    public String generateName() {
+        return null;
     }
+
+//    @Override
+//    public String toString() {
+//        // call superclass toString method to get Shape details
+//        return super.toString() + "[ id = " + this.getId() + "] "
+//                + "[ pedigree = " + this.pedigree+ "] "
+//                +" [ weight ="+this.weight+"]"
+//                +" [ age ="+this.age+"]";
+//    }
 
 
 }
